@@ -10,13 +10,24 @@
                
     </head>
     <body>
+        
            
-        <div class="page-header">
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-pencil"></span>New post</a>
-           <p> <a href="/admin" class="top-menu"><span class="glyphicon glyphicon-user"></span> Login </a></p>
-                  
-            <h1><a href="/">Apiwana Blog</a></h1>
+        <div class="page-header">  
+           <div  <a href="#" data-toggle="tooltip" title="จัดทำโดย นางสาวอภิวนา สุวรรณภูมิ 5910110529">
+           <a  class="top-menu"><span class="glyphicon glyphicon-info-sign"></span></a></div>
+           <div <a href="#" data-toggle="tooltip" title="New post"></a>
+           <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-pencil"></span>New post</a> </div>
+         
+           <p><a href="/admin" data-toggle="tooltip" title="Login" class="top-menu"><span class="glyphicon glyphicon-user"></span> Login </a></p>
+            
+            <h1><a data-toggle="tooltip" title="Apiwana Blog" href="/">Apiwana Blog</a></h1>
         </div>
+
+        <div class="jumbotron text-center">
+                <h1>Welcome to Apiwana Blog</h1>
+                <p>This is my diary.</p> 
+        </div>
+        
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
@@ -24,7 +35,18 @@
                     {% endblock %}
                 </div>
             </div>
+            
+        <form>
+                <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <textarea class="form-control" rows="2" id="comment"></textarea>
+                  <a href="#">  <button type="submit" class="save btn btn-default"> <span class="glyphicon glyphicon-floppy-save"></span>Save</button> </a>
+                </div>
+        </form>
+        
         </div>
         
+        
+
     </body>
 </html>
